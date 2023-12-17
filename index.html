@@ -42,6 +42,22 @@
         section {
             text-align: center;
             padding: 50px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+
+        #about {
+            background-image: url('about_background.jpg.jpg');
+        }
+
+        #portfolio {
+            background-image: url('portfolio_background.jpg.jpg');
+        }
+
+        #contact {
+            background-image: url('contact_background.jpg.jpg');
         }
 
         footer {
@@ -49,6 +65,17 @@
             color: #fff;
             text-align: center;
             padding: 20px;
+        }
+
+        .portfolio-images img {
+            width: 200px; 
+            margin: 0 20px; 
+        }            
+        .contact-icons a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -66,18 +93,26 @@
 
     <section id="about">
         <h2>About me</h2>
-        <p>Hi there! Thank you for being on my website. My name is Yuliia and I am a data analyst living in Japan since 2020. I build end to end products with Python and JavaScript and love creating things.</p>
+        <p>Hi there! Thank you for being on my website. My name is Yuliia and I am a data analyst living in Japan since 2020. I build end-to-end products with Python and JavaScript and love creating things.</p>
     </section>
 
     <section id="portfolio">
         <h2>My Portfolio</h2>
-        <p>Link 1, Link 2 ...</p>
+        <div class="portfolio-images">
+            <a href="https://github.com/YuriyaJP/Python-Ren-Py-made-ESL-Visual-Novel" target="_blank"><img src="portfolio_image1.png" alt="Project 1 - A Visual Novel"></a>
+            <a href="#" target="_blank"><img src="portfolio_image2.jpg" alt="Project 2"></a>
+            <a href="#" target="_blank"><img src="portfolio_image3.jpg" alt="Project 3"></a>
+        </div>
     </section>
 
     <section id="contact">
         <h2>Contact me</h2>
         <p>Send me an email or connect with me through social media for a chat. </p>
-        <p>julia.chekhovskaua(at)gmail.com</p>
+        <p>Email: <a href="mailto:julia.chekhovskaua@gmail.com">julia.chekhovskaua(at)gmail.com</a></p>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/yuliia-che/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/YuriyaJP" target="_blank">GitHub</a>
+        </div>
     </section>
 
     <footer>
