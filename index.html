@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuliia - Landing Page</title>
+    <title>Yuliia Chekhovska</title>
     <style>
+        /* Your existing styles remain unchanged */
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f7f7f7;
+            background-color: rgb(115, 115, 152);
         }
 
         header {
-            background-color: #3498db;
+            background-color: #020f19;
             padding: 20px;
             text-align: center;
             color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #2c3e50;
+            background-color: #061e36;
             padding: 10px;
         }
 
@@ -49,27 +54,32 @@
         }
 
         #about {
-            background-image: url('about_background.jpg.jpg');
+            background-image: url('background1.jpg');
         }
 
         #portfolio {
-            background-image: url('portfolio_background.jpg.jpg');
+            background-image: url('background2.jpg');
         }
 
         #contact {
-            background-image: url('contact_background.jpg.jpg');
+            background-image: url('background3.jpg');
         }
 
         footer {
-            background-color: #34495e;
+            background-color: #000; /* Change to black */
             color: #fff;
             text-align: center;
             padding: 20px;
         }
 
+        .portfolio-images a {
+            display: block;
+            margin: 20px 0; /* Add space between images */
+        }
+
         .portfolio-images img {
-            width: 200px; 
-            margin: 0 20px; 
+            width: 300px; /* Make images larger */
+            margin: 0 auto; /* Center images */
         }            
         .contact-icons a {
             color: #fff;
@@ -77,11 +87,40 @@
             margin: 0 15px;
             font-size: 24px;
         }
+
+        /* Added styles for the animated intro */
+        .intro-container {
+            text-align: center;
+            padding: 50px;
+            margin-top: 100px; /* Adjust as needed */
+        }
+
+        .script-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .script-animation.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Added styles for the profile picture */
+        .profile-picture {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
 
     <header>
+        <!-- Add profile picture to the header -->
+        <div>
+            <img src="yuliia.jpg" alt="Yuliia Chekhovska" class="profile-picture">
+        </div>
         <h1>Yuliia Chekhovska</h1>
     </header>
 
@@ -91,17 +130,40 @@
         <a href="#contact">Contact me</a>
     </nav>
 
+    <!-- Animated intro added here -->
+    <div class="intro-container">
+        <h1 class="script-animation">Hello, I'm Yuliia Chekhovska</h1>
+        <p class="script-animation">Thank you for being on my website.</p>
+        <p class="script-animation">I am a Ukrainian enjoying life in Japan since 2020.</p>
+        <p class="script-animation">Since you are here, take a look at my portfolio below.</p>
+        <p class="script-animation">Thanks!</p>
+    </div>
+
     <section id="about">
         <h2>About me</h2>
-        <p>Hi there! Thank you for being on my website. My name is Yuliia and I am a data analyst living in Japan since 2020. I build end-to-end products with Python and JavaScript and love creating things.</p>
+        <p id="about-text">2017 - a blog writer, Ukraine</p>
+        <p>2018 - a career counselor, Germany.</p>
+        <p>2020 - an academic researcher, Japan.</p>
+        <p>2021 - an educator, Japan.</p>
+        <p>2023 - an NLP engineer, Japan.</p>
     </section>
 
     <section id="portfolio">
         <h2>My Portfolio</h2>
         <div class="portfolio-images">
-            <a href="https://github.com/YuriyaJP/Python-Ren-Py-made-ESL-Visual-Novel" target="_blank"><img src="portfolio_image1.png" alt="Project 1 - A Visual Novel"></a>
-            <a href="#" target="_blank"><img src="portfolio_image2.jpg" alt="Project 2"></a>
-            <a href="#" target="_blank"><img src="portfolio_image3.jpg" alt="Project 3"></a>
+            <a href="https://github.com/YuriyaJP/Python-Ren-Py-made-ESL-Visual-Novel" target="_blank">
+                <img src="portfolio_image1.png" alt="Project 1 - A Visual Novel">
+                <p>Game-Dev - a Visual Novel Game for English Learners</p>
+                <p>The purpose of this game is to enhance willingness to communicate in high school students in a playful manner. I created this game with Python in Ren'Py, which is a popular tool for making visual novels. I introduced it to my students and taught them the basics of code writing. Since the game has at least 8 outcomes, each path required a different label and two choices.</p>
+            </a>
+            <a href="#" target="_blank">
+                <img src="portfolio_image2.jpg" alt="Project 2">
+                <p>Project 2 Description</p>
+            </a>
+            <a href="#" target="_blank">
+                <img src="portfolio_image3.jpg" alt="Project 3">
+                <p>Project 3 Description</p>
+            </a>
         </div>
     </section>
 
@@ -116,8 +178,31 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 Yuliia Chekhovska. All rights reserved.</p>
+        <p>&copy; 2023 Yuliia Chekhovska's Personal Website. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript (optional, for additional interactivity) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Add 'active' class to elements with 'script-animation' class after a delay
+            const scriptElements = document.querySelectorAll('.script-animation');
+            scriptElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('active');
+                }, index * 500); // Adjust the delay (in milliseconds) between each element
+            });
+
+            // Separate animation for the about me section
+            const aboutText = document.getElementById('about-text');
+            const aboutSentences = aboutText.innerHTML.split('.'); // Split the text into sentences
+            aboutText.innerHTML = ''; // Clear the original text
+
+            aboutSentences.forEach((sentence, index) => {
+                setTimeout(() => {
+                    aboutText.innerHTML += sentence.trim() + '.';
+                }, index * 1000); // Adjust the delay between each sentence
+            });
+        });
+    </script>
 </body>
 </html>
