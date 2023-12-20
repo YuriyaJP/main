@@ -12,11 +12,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: rgb(115, 115, 152);
+            background-color: #ffffff; /* Set to animated intro background color */
+            color: #333; /* Set a darker color for text */
         }
 
         header {
-            background-color: #020f19;
+            background-color: #000000;
             padding: 20px;
             text-align: center;
             color: #fff;
@@ -28,12 +29,12 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #061e36;
+            background-color: #ffffff; /* Set to header background color */
             padding: 10px;
         }
 
         nav a {
-            color: #fff;
+            color: #000000;
             text-decoration: none;
             margin: 0 20px;
             font-size: 18px;
@@ -47,22 +48,19 @@
         section {
             text-align: center;
             padding: 50px;
+            background-color: #ffffff; /* Set to animated intro background color */
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            color: #fff;
+            color: #333; /* Set a darker color for text */
         }
 
         #about {
-            background-image: url('background1.jpg');
-        }
-
-        #portfolio {
-            background-image: url('background2.jpg');
+            background-image: url('background1.jpg'); /* Add your background image path */
         }
 
         #contact {
-            background-image: url('background3.jpg');
+            background-image: url('background3.jpg'); /* Add your background image path */
         }
 
         footer {
@@ -75,6 +73,7 @@
         .portfolio-images a {
             display: block;
             margin: 20px 0; /* Add space between images */
+            text-decoration: none; /* Remove hyperlink styling */
         }
 
         .portfolio-images img {
@@ -93,12 +92,15 @@
             text-align: center;
             padding: 50px;
             margin-top: 100px; /* Adjust as needed */
+            color: #000000; /* Set text color to white */
         }
 
         .script-animation {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s ease, transform 1s ease;
+            font-size: 20px; /* Set larger font size */
+            font-weight: bold; /* Set bold text */
         }
 
         .script-animation.active {
@@ -112,6 +114,15 @@
             border-radius: 50%;
             margin-right: 20px;
         }
+
+        /* Added CSS perks for interactivity */
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -119,15 +130,15 @@
     <header>
         <!-- Add profile picture to the header -->
         <div>
-            <img src="yuliia.jpg" alt="Yuliia Chekhovska" class="profile-picture">
+            <img src="yuliia.jpg" alt="Yuliia Chekhovska" class="profile-picture hover-scale">
         </div>
         <h1>Yuliia Chekhovska</h1>
     </header>
 
     <nav>
-        <a href="#about">About me</a>
-        <a href="#portfolio">My portfolio</a>
-        <a href="#contact">Contact me</a>
+        <a href="#about" class="hover-scale">About me</a>
+        <a href="#portfolio" class="hover-scale">My portfolio</a>
+        <a href="#contact" class="hover-scale">Contact me</a>
     </nav>
 
     <!-- Animated intro added here -->
@@ -151,16 +162,15 @@
     <section id="portfolio">
         <h2>My Portfolio</h2>
         <div class="portfolio-images">
-            <a href="https://github.com/YuriyaJP/Python-Ren-Py-made-ESL-Visual-Novel" target="_blank">
-                <img src="portfolio_image1.png" alt="Project 1 - A Visual Novel">
-                <p>Game-Dev - a Visual Novel Game for English Learners</p>
+            <a href="#" class="hover-scale">
+                <img src="portfolio_image1.png" alt="Project 1 - A Visual ESL Novel">
                 <p>The purpose of this game is to enhance willingness to communicate in high school students in a playful manner. I created this game with Python in Ren'Py, which is a popular tool for making visual novels. I introduced it to my students and taught them the basics of code writing. Since the game has at least 8 outcomes, each path required a different label and two choices.</p>
             </a>
-            <a href="#" target="_blank">
+            <a href="#" class="hover-scale">
                 <img src="portfolio_image2.jpg" alt="Project 2">
                 <p>Project 2 Description</p>
             </a>
-            <a href="#" target="_blank">
+            <a href="#" class="hover-scale">
                 <img src="portfolio_image3.jpg" alt="Project 3">
                 <p>Project 3 Description</p>
             </a>
@@ -172,8 +182,8 @@
         <p>Send me an email or connect with me through social media for a chat. </p>
         <p>Email: <a href="mailto:julia.chekhovskaua@gmail.com">julia.chekhovskaua(at)gmail.com</a></p>
         <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/yuliia-che/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/YuriyaJP" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/yuliia-che/" target="_blank" class="hover-scale">LinkedIn</a>
+            <a href="https://github.com/YuriyaJP" target="_blank" class="hover-scale">GitHub</a>
         </div>
     </section>
 
